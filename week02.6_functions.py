@@ -13,7 +13,7 @@ from tempfile import tempdir
 
 
 def add1():
-  a,b = map(int, input().split())
+  a,b = map(int, input("values for addition: ").split())
   print(a+b)
 
 #takes in argument and return no value
@@ -22,6 +22,13 @@ def swap1(a,b):
   a = b
   b = c
   print("a=%d,b=%d"%(a,b))
+
+def swap2(a,b):
+  print(type(a),type(b))
+  c = a[0]
+  a[0] = b[0]
+  b[0] = c
+  print("a=%d,b=%d"%(a[0],b[0]))
 
 '''
 #takes no arguments and return value
@@ -40,9 +47,16 @@ print(value2)
 
 def main():
   add1()
-  a,b = map(int, input().split())
-  swap1(a,b)
-  print(a,b)
+  a,b = map(int, input("swapping values: ").split())
+  swap1(a,b)#here only the value of this function changes
+  print(a,b)#just because it's direct function here the original value remain as it is 
+  a,b = map(int, input("swapping values: ").split())
+  x=[0]*1
+  y=[0]*1
+  x[0]=a
+  y[0]=b
+  swap2(x,y)#here we are giving the input in list so it will automatically get converted to list
+  print(x[0],y[0])#here just because its not direct method and we gave attri as list. the value will also change 
 
 if __name__=="__main__":
   main()
