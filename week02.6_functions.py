@@ -30,20 +30,20 @@ def swap2(a,b):
   b[0] = c
   print("a=%d,b=%d"%(a[0],b[0]))
 
-'''
+
 #takes no arguments and return value
 def add3():
-  a,b=map(int,input().split())
+  a,b=map(int,input("value for Addition: ").split())
   return a+b
 #takes in argument and return value
 def add4(a,b):
   return int(a)+int(b)
 
 value1 = add3()
-print(value1)
+print("sum=",value1)
 value2= add4(4,5)
-print(value2)
-'''
+print("sum=",value2)
+
 
 def main():
   add1()
