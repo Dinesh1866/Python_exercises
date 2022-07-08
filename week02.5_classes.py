@@ -39,6 +39,7 @@ def main():
 #we can pass them as parametes and get them and print them 
 
 #eg
+'''
 class Mobile:
       def __init__(self,brandName,color,isJack):
             self.brandName = brandName
@@ -69,4 +70,19 @@ m2= Mobile("Apple","Army Green",False)
 print(m2.brandName)
 print(m2.color)
 print(m2.isJack)
-m2.calling("Sanjay")
+m2.calling("Sanjay")'''
+
+
+#creating a class student
+
+class Student():
+      def __init__(self,studentName,studentRegNo,studentclass):
+            self.studentName = studentName
+            self.studentRegNo = studentRegNo
+            self.studentClass = studentclass
+
+
+student1 = Student("Dineshkumar","11711397","E1707")
+student2 = Student("Jey","11753463","M1703")
+print(student1.studentName, student1.studentRegNo,student1.studentClass)
+print(student2.studentName,student2.studentRegNo,student2.studentClass)
