@@ -1,10 +1,83 @@
+# Print first Integer. takes in Number of Test cases and Integer
 #print the first letter from the input without indexing
-'''n = int(input())
+
+#implimentation eg:
+n = int(input())
 rem = 0
 while n!=0:
       rem = n%10
       n = n//10
-print(rem)'''
+print(rem)
+
+#answer
+for value in range(int(input())):
+  N = int(input())
+  nrem =0
+  while N >0:
+    nrem = N%10
+    N=N//10
+  print(nrem)
+
+
+
+#Sum of Digits - ie : we input a number with certain gigits and wanna find sum of each nums
+#eg: 12345 = 15
+
+X = input()
+value = 0
+for numbers in X:
+  value += int(numbers)
+print(value)
+
+
+
+#favourite number - i.e: a number with certain digits will be given
+#and we'll select a num and if the number present in the input digit 
+#we should print the number and how many times do they occured
+
+for val in range(int(input())):
+  N = input()
+  count = 0
+  for value in range(len(N)):
+    if N[value] =="5":
+      count = count + 1
+  print(count)
+
+
+
+#Reverse the Number - i.e: an input should be number with certain digits
+#we should reverse the number without using inbuild numbers
+#the given number or input shjould not staret with z or end with zero
+
+'''X = input()
+print(X[::-1])'''
+
+num=int(input())
+result = 0
+while num!=0:
+  last_digit = num %10
+  num = num//10
+  result = result *10 + last_digit
+print(result)
+
+
+
+#Find Relation between two numbers - Operators. i.e: we input two integers X and Y
+# and we should find X is greater Than Y or Smaller or equal to Y.
+
+X,Y = map(int,input().split())
+if X >Y:
+  print("%d is greater than %d" %(X,Y))
+elif X <Y:
+  print("%d is smaller than %d"%(X,Y))
+else:
+  print("%d is equal to %d"%(X,Y))
+
+
+
+#
+
+
 
 
 #one pattern
