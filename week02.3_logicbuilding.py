@@ -75,8 +75,46 @@ else:
 
 
 
-#
+#Character value - i.e: for every input character we should print a predefined character or string
+#eg: D or d - Dineshkumar , R or r - Radha , S or s - Subramanian, sanjay
+ch = input()
+if ch=="D"or ch=="d":
+      print("Dineshkumar")
+elif ch=="S"or ch=="s":
+      print("Subramanian, Sanjay")
+elif ch=="R"or ch=="r":
+      print("Radha")
 
+
+
+#Find the given year is a leap year or not. and takes in test cases as input and Years
+def getLeapyear(year):
+  if year %4 ==0:
+    if year %100==0:
+      if year %400 ==0:
+        print("Yes")
+      else:
+        print("No")
+    else:
+      print("Yes")
+  else:
+    print("No")
+
+for years in range(int(input())):
+  getLeapyear(int(input()))
+
+
+
+#Find the Second smallest integer from the given three values
+X,Y,Z = map(int,input().split())
+max_val=max(X,Y,Z)
+min_val=min(X,Y,Z)
+if X!= max_val and X!=min_val:
+      print(X)
+elif Y!= max_val and Y!=min_val:
+      print(Y)
+else:
+      print(Z)
 
 
 
@@ -102,8 +140,15 @@ for i in range(5,0,-1):
 for i in range(1,6):
       print("1"*i)
 
+
 #but what if the pattern changes like instead 1 print *
 #or print 123 numbers 
+'''
+1 2 3 4 5
+1 2 3 4 
+1 2 3
+1 2
+1'''
 for i in range(1,6):
       for j in range(i):
             print("1",end="")
