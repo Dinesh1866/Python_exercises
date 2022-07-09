@@ -57,20 +57,20 @@ class Mobile:
 
 
 def main():
-m1 = Mobile("Samsung","Mate Black",True)
-print(m1.brandName)
-print(m1.color)
-print(m1.isJack)
-m1.calling("Dinesh")
-m1.cameraClick
-m1.message
-print("____________________")
+      m1 = Mobile("Samsung","Mate Black",True)
+      print(m1.brandName)
+      print(m1.color)
+      print(m1.isJack)
+      m1.calling("Dinesh")
+      m1.cameraClick
+      m1.message
+      print("____________________")
 #we can print as many we want
-m2= Mobile("Apple","Army Green",False)
-print(m2.brandName)
-print(m2.color)
-print(m2.isJack)
-m2.calling("Sanjay")
+      m2= Mobile("Apple","Army Green",False)
+      print(m2.brandName)
+      print(m2.color)
+      print(m2.isJack)
+      m2.calling("Sanjay")
 
 
 #creating a class student
