@@ -13,6 +13,7 @@ print (count)'''
 
 
 #code chef - https://www.codechef.com/LTIME73B/problems/PAJAPONG
+'''
 T = int(input())
 if 1<=T<=50:
       while T>0:
@@ -25,4 +26,20 @@ if 1<=T<=50:
                   else:
                         print("Paja")
             T -=1
-            
+'''
+
+
+#Perfrct Numbers and Divisors:
+T = int(input())
+while T >0:
+      N = int(input())
+      lst = 0
+      for num in range(1,N):
+            divisor = N%num
+            if divisor ==0:
+                  lst += num
+      if lst == N:
+            print("true")
+      else:
+            print("false")
+      T -=1
