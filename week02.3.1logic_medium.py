@@ -43,3 +43,13 @@ while T >0:
       else:
             print("false")
       T -=1
+
+#Socks
+T = int(input())
+while T>0:
+      pair = int(input())
+      worst_case = pair + 1
+      print(worst_case)
+      T -=1
+
+
