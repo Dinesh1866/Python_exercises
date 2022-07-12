@@ -65,3 +65,26 @@ while T>0:
   else:
       print(int(angle_large_hand-angle_small_hand))
   T -=1
+
+
+
+
+
+
+#hard Problems
+#print n number of times the value with min times with just copy pasting the o/p
+def minSteps(n):
+      ans = 0
+      d = 2
+      while n > 1:
+            while n % d == 0:
+                  ans += d
+                  n /= d
+            d += 1
+      return ans
+
+T = int(input())
+while T>0:
+      N = int(input())
+      print(minSteps(N))
+      T -=1
