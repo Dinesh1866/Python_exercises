@@ -53,3 +53,15 @@ while T>0:
       T -=1
 
 
+#show the angle between two hands in analogue clock
+T = int(input())
+while T>0:
+  h,m = map(int,input().split())
+  h = h*60*0.5
+  angle_small_hand = h +(m*0.5)
+  angle_large_hand = m * 6
+  if angle_small_hand > angle_large_hand:
+      print(int(angle_small_hand-angle_large_hand))
+  else:
+      print(int(angle_large_hand-angle_small_hand))
+  T -=1
