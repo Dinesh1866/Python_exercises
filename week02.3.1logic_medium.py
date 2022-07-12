@@ -26,7 +26,7 @@ if 1<=T<=50:
                   else:
                         print("Paja")
             T -=1
-'''
+
 
 
 #Perfrct Numbers and Divisors:
@@ -88,3 +88,58 @@ while T>0:
       N = int(input())
       print(minSteps(N))
       T -=1
+
+
+#sum of all digits in the n numbers
+T = int(input())
+while T>0:
+  N = int(input())
+  digits_total = ""
+  for num in range(1,N+1):
+    num = str(num)
+    digits_total += num
+  print(len(digits_total))
+  T -=1
+
+#thinking diff
+def totalDigits(n):
+    number_of_digits = 0
+    for i in range(1, n, 10):
+        number_of_digits = (number_of_digits +(n - i + 1))
+
+    return number_of_digits
+
+
+T = int(input())
+while T>0:
+      n = int(input())
+      s =totalDigits(n)+1
+      print(s)
+      T-=1
+
+
+#else
+T = int(input())
+while T>0:
+  number_of_digits =0
+  N = int(input())
+  for i in range(1,N,10):
+    number_of_digits +=(N-i+1)
+  print(number_of_digits +1)
+  T -=1'''
+
+
+#find the price for items with discount and not discount in total
+#will get discount if items is more than 100
+N=int(input())
+while N>0:
+      quantity,price = map(int,input().split())
+      if quantity >100:
+            discount = price *(20/100)
+            price = price - discount
+            total = quantity * price
+            print("%.1f"%(total))
+      else:
+            total = quantity * price
+            print("%.1f"%(total))
+      N -=1
