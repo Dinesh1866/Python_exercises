@@ -126,7 +126,7 @@ while T>0:
   for i in range(1,N,10):
     number_of_digits +=(N-i+1)
   print(number_of_digits +1)
-  T -=1'''
+  T -=1
 
 
 #find the price for items with discount and not discount in total
@@ -142,4 +142,38 @@ while N>0:
       else:
             total = quantity * price
             print("%.1f"%(total))
-      N -=1
+      N -=1'''
+
+
+#Ten from Two
+#a number will be given and if the number div by ten then print 0
+# if not only multiply it by two and make it div by 10 and find count how many times it takes to
+# get the value div by 10 
+
+T = int(input())
+while T>0:
+      N = int(input())
+      if N% 10 ==0:
+            print(0)
+      elif N%10!=0:
+            count = 0
+            while N%10!=0:
+                  count +=1
+                  N = N*2
+                  if count > 20:
+                    count = -1
+                    break
+            print(count)
+      T -=1
+
+#fascinating numbers
+T = int(input())
+while T>0:
+      N = input()
+      num = int(N)+1
+      last_digit = num%10
+      while str(last_digit) in N:
+            num = num+1
+            last_digit = num%10
+      print(num)
+      T -=0
