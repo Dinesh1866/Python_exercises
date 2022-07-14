@@ -142,6 +142,9 @@ class Car:
       def break_now(self):
             print("Speed decreased and stopped")
 
+      def movement(self):
+            print("moves front and back")
+
 class Thar(Car):#above for thar we haven't initiated any attributes but it still asks for atributes 
 #this is called inheritance
       def fourwheeldrive(self):
@@ -164,3 +167,16 @@ car3 = Urus("6","5","240")
 print(car3.maxSpeed)
 print(car3.sportsmode())
 print(car3.gears)
+
+#if we want to override an existing function then we can just call the fun in class and override them
+# we can also able to override the attributes or can even add new attributes 
+class Flyingcar(Car):
+      def __init__(self, gears, seats, maxSpeed,milage):
+            self.milage = milage
+            super().__init__(gears, seats, maxSpeed)
+      def movement(self):
+            print("moves up,down,forward and backward")
+
+flyingcar1 = Flyingcar(5,2,100,20)
+print(flyingcar1.movement())
+print(flyingcar1.milage)
