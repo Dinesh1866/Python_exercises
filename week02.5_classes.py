@@ -123,3 +123,44 @@ Mobile.year ="2022"
 print(mobileM1.year)
 print(mobileM2.year)
 #i.e: the variables that are limited to certain instance are called Instance variable and to the class are called Class Variable
+
+
+
+
+#Inheritance
+#will create a parent class and derived class and know how inheritance work
+
+class Car:
+      def __init__(self,gears,seats,maxSpeed):
+            self.gears = gears
+            self.seats = seats
+            self.maxSpeed = maxSpeed
+
+      def accelerate(self):
+            print("Speed increased")
+
+      def break_now(self):
+            print("Speed decreased and stopped")
+
+class Thar(Car):#above for thar we haven't initiated any attributes but it still asks for atributes 
+#this is called inheritance
+      def fourwheeldrive(self):
+            print("four wheel drive mode on!")
+      #the derived need not only to have parent class attributes it can have its own too
+
+car1 = Thar("5","4","140") 
+print(car1.accelerate())
+print(car1.fourwheeldrive())
+#like normal we can also able to create instance with car class
+car2 = Car("6","7","170")
+print(car2.accelerate())
+
+#we can have as many derived class as we want eg:
+class Urus(Car):
+      def sportsmode(self):
+            print("Sports mode activated huhu!!")
+
+car3 = Urus("6","5","240")
+print(car3.maxSpeed)
+print(car3.sportsmode())
+print(car3.gears)
