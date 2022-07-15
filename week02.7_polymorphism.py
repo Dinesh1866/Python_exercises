@@ -59,5 +59,42 @@ print(S3)
 #So what we here done is we over riden the default add function and made it
 # i.e: the + sign function got overriden here
 S3 = S1<S2
-print(S3)
+print(S3)#return false because S1 is greater than S2
 # I.e: the < or lt function is over rideen here
+
+
+'''Exception Handling'''
+#try and except
+
+a = int(input())
+b = int(input())
+
+try:
+      print(a//b)
+except Exception:
+      print("An Error has occured")
+
+
+# we can also able to store the error value and print them with e value
+a = int(input())
+b = input()
+
+try:
+      print(a+b)
+except Exception as e:
+      print(e)
+
+
+#try , except and finally
+#finally will executed everytime even after there is error and exception
+a = int(input())
+b = int(input())
+
+try:
+      print(a+b)
+except Exception as e:
+      print(e)
+finally:
+      print("Executed")
+#if there is no error the o/p and finally will get executed
+#if there is error the except and finally will get executed - both cases finally will for sure get executed
