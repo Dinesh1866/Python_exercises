@@ -1,6 +1,9 @@
 #Class
 
 #we create a class using Mobile as example
+import more_itertools
+
+
 class Mobile:
       def __init__(self):
             self.brandName = "Samsung"
@@ -75,8 +78,6 @@ def main():
 
 #creating a class student
 
-from sqlalchemy import false, true
-
 
 class Student():
       def __init__(self,studentName,studentRegNo,studentclass):
@@ -95,8 +96,8 @@ print(student2.studentName,student2.studentRegNo,student2.studentClass)
 #create class for showing 
 '''Instance Variable and Class Variable'''
 class Mobile:
-      tempered = true
-      chargingwithbox = false
+      tempered = True
+      chargingwithbox = False
       #the above two are class variables and we can access with any instance
 
       def __init__(self,brandName,colour,isJack):
@@ -105,8 +106,8 @@ class Mobile:
             self.isJack = isJack
             #the above are instance variables these change for every value
 
-mobileM1 = Mobile("Oppo","Black",true)
-mobileM2 = Mobile("OnePlus","Blue",false)   
+mobileM1 = Mobile("Oppo","Black","true")
+mobileM2 = Mobile("OnePlus","Blue","false")   
 print(mobileM1.brandName)
 print(mobileM2.colour)
 
@@ -170,6 +171,7 @@ print(car3.gears)
 
 #if we want to override an existing function then we can just call the fun in class and override them
 # we can also able to override the attributes or can even add new attributes 
+#to do so we will use super keyword, which will help us to retain the original attributes
 class Flyingcar(Car):
       def __init__(self, gears, seats, maxSpeed,milage):
             self.milage = milage
@@ -180,3 +182,47 @@ class Flyingcar(Car):
 flyingcar1 = Flyingcar(5,2,100,20)
 print(flyingcar1.movement())
 print(flyingcar1.milage)
+
+
+#multiple inheritance means derived class getting inherited from various base classes
+#lets create a another base class and add an derived class
+
+class Mahindera:
+      def __init__(self,brandname,type):
+            self.brandname = brandname
+            self.type = type
+
+      def fuel(self,fuel):
+            print("your mode of fuel is "+fuel)
+
+class XUV700(Car,Mahindera):
+      def __init__(self, gears, seats, maxSpeed,brandname,type):
+            Car.__init__(self,gears, seats, maxSpeed)
+            Mahindera.__init__(self,brandname,type)
+
+car4 = XUV700(6,7,194,"mahindra","SUV")
+print(car4.seats)
+print(car4.brandname)
+print(car4.fuel("diesel"))
+
+
+
+
+#method Resolution Order (MRO) - this explains how a class should initialized in which order
+#to find we can directly call className.mro
+
+class X:
+      pass
+class Y:
+      pass
+class Z:
+      pass
+class P(X,Y):
+      pass
+class Q(Y,Z):
+      pass
+class R(P,Q,Z):
+      pass
+#they can be wriotten in two ways
+print(R.__mro__)
+print(R.mro())
