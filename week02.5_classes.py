@@ -1,7 +1,6 @@
 #Class
 
 #we create a class using Mobile as example
-import more_itertools
 
 
 class Mobile:
@@ -226,3 +225,66 @@ class R(P,Q,Z):
 #they can be wriotten in two ways
 print(R.__mro__)
 print(R.mro())
+
+
+
+#Access Modifier - public,Protected and Private
+#will now create an bank account and use thse modifiers
+# _ - single underscore for protected and __ - double for private
+#protected can be accessed with sub class but private can only be accessed with main class
+#protected
+class Account:
+      __amount=0
+      def deposite(self,add):
+            self.__amount +=add
+      
+      def debit(self,sub):
+            self.__amount -=sub
+
+      def printAmount(self):
+            print(self.__amount)
+
+b1 = Account()
+b1.deposite(100)
+b1.debit(50)
+b1.printAmount()#note : we can only able to access it with this function
+#we cannot use something like b1.__amount - this is private so this will throw error
+
+class User(Account):
+      pass
+
+Dinesh = User()
+Dinesh.deposite(500)
+Dinesh.printAmount()#and as it is private the child can also can't access the values within it
+#only we can able to do it through function
+
+#Protected
+class BankAccount:
+      _amount=0
+      def deposite(self,add):
+            self._amount +=add
+      
+      def debit(self,sub):
+            self._amount -=sub
+
+      def printAmount(self):
+            print(self._amount)
+
+b2 = BankAccount()
+b2.deposite(100)
+b2.debit(50)
+b2.printAmount()
+#we cannot use something like b1.__amount - this is private so this will throw error
+
+class AccountUser(BankAccount):
+      def calculateTax(self):
+            tax = self._amount *0.2
+            print(tax)
+      pass
+Radha = AccountUser()
+Radha.deposite(500)
+Radha.printAmount()
+print(Radha._amount)
+#note : we can now able to access it with this function as this is protected
+Radha.calculateTax()
+#and we can also able to access it with the function
