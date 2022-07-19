@@ -46,4 +46,23 @@ print()
 
 
 
-# 4.
+# 4. Minimum House Number
+'''person lives in a colony, where N houses are built in a single row numbered from 0 to N - 1.
+The first house has a house number 0, the second house has a house number 1 and so on, 
+every house pays some rent at the end of the month.
+Help PrepBuddy in finding out the house number of the house paying the minimum rent.
+Note: All house rents are unique.'''
+T = int(input())
+while T>0:
+  N= int(input())
+  arr = list(map(int,input().split()))
+  maxi = 1001
+  n = 0
+  for i in range(N):
+    if arr[i]<maxi:
+      maxi = arr[i]
+      n = i
+  print(n)
+  T -=1
+
+
