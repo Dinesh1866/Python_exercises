@@ -66,3 +66,21 @@ while T>0:
   T -=1
 
 
+
+# 5. Min and Max
+'''Let us give you a fairly simple array problem to solve. If you know how to iterate through the array, you will easily be able to solve this.
+The problem statement is simple- given N elements, find the minimum and maximum numbers among those elements.'''
+T = int(input())
+while T>0:
+  n = int(input())
+  arr = list(map(int,input().split()))
+  mini = 10000001
+  maxi = -1
+  for i in range(n):
+    if mini > arr[i]:
+      mini = arr[i]
+  for i in range(n):
+    if maxi < arr[i]:
+      maxi = arr[i]
+  print(mini,maxi)
+  T -=1
