@@ -84,3 +84,19 @@ while T>0:
       maxi = arr[i]
   print(mini,maxi)
   T -=1
+
+
+
+# 6. Last One
+'''We all know computer understands only 0 and 1. Let's say you are given one such array 
+A consisting only 0's and 1's. Your task is to print the last index of the 1 present in the array.'''
+T = int(input())
+while T>0:
+  N = int(input())
+  arr = list(map(int,input().split()))
+  count = -1
+  for i in range(N):
+    if arr[i]==1:
+      count = i
+  print(count)
+  T -=1
