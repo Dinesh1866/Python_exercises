@@ -100,3 +100,26 @@ while T>0:
       count = i
   print(count)
   T -=1
+
+
+
+# 7. Find the leader
+'''A simple problem statement with no stories: Given an array of positive integer, 
+find out all the elements that are greater than or equal to all the elements to it's right side.'''
+
+def printLeaders(arr, size):
+     
+    max_from_right = arr[size-1]   
+    print (max_from_right,end=' ')    
+    for i in range( size-2, -1, -1):        
+        if max_from_right < arr[i]:        
+            print (arr[i],end=' ')
+            max_from_right = arr[i]
+          
+T = int(input())
+while T>0:
+  N = int(input())
+  arr = list(map(int,input().split()))
+  printLeaders(arr, len(arr)) 
+  print()
+  T -=1
