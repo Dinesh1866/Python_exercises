@@ -31,3 +31,19 @@ while T>0:
 
 
 # 3. Find Even and Odd element
+'''You are given an array of size N, containing N integers. person is asking you to print all the even elements 
+in the first line and all odd elements in the second line.The array will contain at least one even and one odd element.'''
+n = int(input())
+arr = list(map(int,input().split()))
+for ele in range(n):
+  if arr[ele]%2==0:
+    print(arr[ele],end=" ")
+print()
+for ele in range(n):
+  if arr[ele]%2!=0:
+    print(arr[ele],end=" ")
+print()
+
+
+
+# 4.
