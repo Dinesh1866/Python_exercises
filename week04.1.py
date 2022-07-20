@@ -26,7 +26,7 @@ def main():
 if __name__=='__main__':
       main()
 #note this is just a basic method not the best one  
-'''
+
 
 #now will do it for left rotation
 def rotateLeft(arr,n):
@@ -52,4 +52,12 @@ def main():
             T -=1
 
 if __name__ =="__main__":
-      main()
+      main()'''
+
+
+#Reversal Algorithm
+'''i.e : if the elements to be rotated "right" k no of times then
+1. first will reverse the elements from n-1 to n-k
+2. then reverse the elements from 0 to n-k-1
+3. then reverse the whole array we get the result 
+in this how large the array can be we get the result using same no of operations'''
