@@ -61,3 +61,30 @@ if __name__ =="__main__":
 2. then reverse the elements from 0 to n-k-1
 3. then reverse the whole array we get the result 
 in this how large the array can be we get the result using same no of operations'''
+
+def reverseRightAlgo(arr,i,j):
+      while i<j:
+            temp = arr[i]
+            arr[i]=arr[j]
+            arr[j]=temp
+            i +=1
+            j -=1
+
+def printArr(arr,n):
+      for i in range(n):
+            print(arr[i],end=" ")
+      print()
+
+def main():
+      T = int(input())
+      while T>0:
+            n,k = map(int,input().split())
+            arr = list(map(int,input().split()))
+            reverseRightAlgo(arr,n-k,n-1)
+            reverseRightAlgo(arr,0,n-k-1)
+            reverseRightAlgo(arr,0,n-1)
+            printArr(arr,n)
+            T -=1
+
+if __name__=="__main__":
+      main()
