@@ -91,3 +91,42 @@ def main():
     
 if __name__ =="__main__":
   main()
+
+
+
+'''Rearrange the Array'''
+def rearrange(arr, n):
+  temp = n*[None]
+  small, large = 0, n-1
+  flag = True
+  for i in range(n):
+    if flag is True:
+      temp[i] = arr[large]
+      large -= 1
+    else:
+      temp[i] = arr[small]
+      small += 1
+    flag = bool(1-flag)
+  for i in range(n):
+    arr[i] = temp[i]
+  return(arr)
+ 
+def printarr(arr,n):
+  for i in range(n):
+    print(arr[i],end=" ")
+  print()
+
+
+def main():
+  T = int(input())
+  while T>0:
+    N = int(input())
+    arr = list(map(int,input().split()))
+    n= len(arr)
+    rearrange(arr,n)
+    printarr(arr,n)
+    T-=1
+    
+
+if __name__=="__main__":
+  main()
