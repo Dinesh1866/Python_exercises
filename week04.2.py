@@ -43,6 +43,21 @@ for i in range(n):
 
 
 
+
+'''Scalar Multiplication'''
+m,n,k = map(int,input().split())
+mat1 = []
+for i in range(n):
+  mat1.append(list(map(int,input().split())))
+
+for i in range(n):
+  for j in range(m):
+    print(mat1[i][j]*k,end=" ")
+  print()
+
+
+
+
 '''Lower and Upper Triangular Matrices'''
 #UpperTriangle
 def UpperTriangle(mat1,n,m):
