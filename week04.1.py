@@ -73,7 +73,7 @@ def reverseRightAlgo(arr,i,j):
 def printArr(arr,n):
       for i in range(n):
             print(arr[i],end=" ")
-      print()
+      
 
 def main():
       T = int(input())
@@ -84,6 +84,7 @@ def main():
             reverseRightAlgo(arr,0,n-k-1)
             reverseRightAlgo(arr,0,n-1)
             printArr(arr,n)
+            print()
             T -=1
 
 if __name__=="__main__":
