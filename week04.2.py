@@ -127,6 +127,33 @@ def main():
     printarr(arr,n)
     T-=1
     
-
 if __name__=="__main__":
   main()
+
+
+
+'''Frequency Array - find the element thats occuring again and again
+i.e: the the repeated elements in an array'''
+t = int(input())
+while t>0:
+  n = int(input())
+  arr = list(map(int,input().split()))
+  freq = [0]*40 #here 40 is the highest constant value
+  for i in range(n):
+    freq[arr[i]]+=1
+
+  #This can be used to find the freq of an array element
+  for i in range(40):
+    if freq[i]>0:
+      print(i,freq[i])#this will print the index and how much repeated 
+  
+  #find the array has an repeating element i.e; unique or not
+  flag =0
+  for i in range(40):
+    if freq[i]>1:
+      flag =0
+      break
+  if flag==1:
+    print("elements are not unique")
+  else:
+    print("all elements are unique")
